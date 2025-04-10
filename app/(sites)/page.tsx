@@ -1,3 +1,5 @@
+'use client'  // This is a client component Solve Hydration Error
+
 import React from 'react'
 import { Footer, Header } from '../components/common'
 import { CallToAction, Hero, LogoTicker,Testimonials ,GridCard, MainPage} from '../components/landing-page'

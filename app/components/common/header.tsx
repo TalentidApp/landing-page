@@ -1,4 +1,5 @@
 'use client'
+
 import React, { useState } from 'react';
 import Arrow from '@/app/assets/arrow-right.svg';
 import MenuIcon from '@/app/assets/menu.svg';
@@ -30,10 +31,16 @@ const Header = () => {
               />
               <MenuIcon className="h-5 w-5 md:hidden" />
               <nav className='hidden md:flex gap-6 text-black/60 items-center lg:ml-20'>
-                <Link href="#home" className="hover:text-black transition-colors duration-200">Home</Link>
+                <Link href="/" className="hover:text-black transition-colors duration-200">Home</Link>
                 <Link href="#features" className="hover:text-black transition-colors duration-200">Pricing</Link>
                 <Link href="#download" className="hover:text-black transition-colors duration-200">Resources</Link>
-                <Link href="https://tally.so/r/3EBzql" target='_blank' className="hover:text-black transition-colors duration-200">Contact</Link>
+                <Link href="/about" legacyBehavior>
+                  <a className="hover:text-black transition-colors duration-200">About</a>
+                </Link>
+                <Link href="/contact" legacyBehavior>
+                  <a className="hover:text-black transition-colors duration-200">Contact</a>
+                </Link>
+                {/* <Link href="https://tally.so/r/3EBzql" target='_blank' className="hover:text-black transition-colors duration-200">Contact</Link> */}
               </nav>
               <div className="">
                 <button
